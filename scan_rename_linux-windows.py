@@ -13,11 +13,11 @@ logger = logging.getLogger()
 # Pfad Scans
 scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
 
-# OCR-Funktion
+# OCR
 def extract_text_with_ocr(pdf_path):
     try:
         logger.info(f"Starte OCR für Datei: {pdf_path}")
-        # Konvertiere PDF in Bilder
+        # Konvertiere PDF zu Bilder
         pages = convert_from_path(pdf_path)
         text = ""
         for page in pages:
@@ -26,14 +26,14 @@ def extract_text_with_ocr(pdf_path):
         logger.info(f"OCR abgeschlossen für Datei: {pdf_path}")
         return text
     except Exception as e:
-        logger.error(f"Fehler bei der OCR-Verarbeitung: {e}")
+        logger.error(f"Fehler bei der Verarbeitung: {e}")
         return ""
 
 # Dateiüberwachung
 class ScanHandler(FileSystemEventHandler):
     def on_created(self, event):
         if event.src_path.endswith(".pdf"):
-            logger.info(f"Neue PDF-Datei erkannt: {event.src_path}")
+            logger.info(f"Neue PDF erkannt: {event.src_path}")
             # ocr neue datei
             extracted_text = extract_text_with_ocr(event.src_path)
             # Datei umbenennen

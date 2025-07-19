@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+
+# Python-Cache
+__pycache__/
+*.pyc
+
+# IDE-Dateien
+.idea/
+.vscode/
+
+# Log-Dateien und temporäre Daten
+*.log
+*.db
+
+# Virtuelle Umgebungen
+venv/
+env/
