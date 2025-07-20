@@ -33,7 +33,7 @@ def extract_text_with_ocr(pdf_path):
 class ScanHandler(FileSystemEventHandler):
     def on_created(self, event):
         if event.src_path.endswith(".pdf"):
-            logger.info(f"Neue PDF erkannt: {event.src_path}")
+            logger.info(f"PDF erkannt: {event.src_path}")
             # ocr neue datei
             extracted_text = extract_text_with_ocr(event.src_path)
             # Datei umbenennen
