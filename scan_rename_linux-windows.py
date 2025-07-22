@@ -36,7 +36,7 @@ class ScanHandler(FileSystemEventHandler):
             logger.info(f"PDF erkannt: {event.src_path}")
             # ocr neue datei
             extracted_text = extract_text_with_ocr(event.src_path)
-            # Datei umbenennen
+            # umbenennen
             logger.info(f"Extrahierter Text: {extracted_text[:100]}...")  
 
 # Überwachung
