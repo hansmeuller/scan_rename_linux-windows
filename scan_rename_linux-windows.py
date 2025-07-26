@@ -21,7 +21,7 @@ def extract_text_with_ocr(pdf_path):
         pages = convert_from_path(pdf_path)
         text = ""
         for page in pages:
-            # OCR auf jeder Seite anwenden
+            # ocr auf jeder Seite anwenden
             text += pytesseract.image_to_string(page)
         logger.info(f"OCR abgeschlossen für Datei: {pdf_path}")
         return text
