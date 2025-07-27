@@ -16,7 +16,7 @@ scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
 # OCR
 def extract_text_with_ocr(pdf_path):
     try:
-        logger.info(f"Starte OCR für Datei: {pdf_path}")
+        logger.info(f"Starte OCR bei: {pdf_path}")
         # Konvertiere in Bilder
         pages = convert_from_path(pdf_path)
         text = ""
