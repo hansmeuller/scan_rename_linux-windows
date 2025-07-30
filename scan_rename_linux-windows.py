@@ -26,7 +26,7 @@ def extract_text_with_ocr(pdf_path):
         logger.info(f"fertig: {pdf_path}")
         return text
     except Exception as e:
-        logger.error(f"Fehler bei der Verarbeitung: {e}")
+        logger.error(f"Fehler bei : {e}")
         return ""
 
 # Dateiüberwachung
