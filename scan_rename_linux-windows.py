@@ -16,7 +16,7 @@ scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
 # OCR
 def extract_text_with_ocr(pdf_path):
     try:
-        logger.info(f"Starte OCR bei: {pdf_path}")
+        logger.info(f"Starte: {pdf_path}")
         # Konvertiere in Bilder
         pages = convert_from_path(pdf_path)
         text = ""
@@ -37,7 +37,7 @@ class ScanHandler(FileSystemEventHandler):
             # ocr neue datei
             extracted_text = extract_text_with_ocr(event.src_path)
             # umbenennen
-            logger.info(f"Extrahierter Text: {extracted_text[:100]}...")  
+            logger.info(f"Extrahiert: {extracted_text[:100]}...")  
 
 # Überwachung
 def start_monitoring():
@@ -45,7 +45,7 @@ def start_monitoring():
     observer = Observer()
     observer.schedule(event_handler, path=scans_folder, recursive=False)
     observer.start()
-    logger.info(f"Überwache das Verzeichnis: {scans_folder}")
+    logger.info(f"Überwache: {scans_folder}")
     try:
         while True:
             time.sleep(1)
