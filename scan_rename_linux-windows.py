@@ -6,7 +6,7 @@ import pytesseract
 from pdf2image import convert_from_path
 import logging
 
-# Einrichtung
+# einrichten
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger()
 
