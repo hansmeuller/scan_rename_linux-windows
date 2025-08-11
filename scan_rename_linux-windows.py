@@ -29,12 +29,12 @@ def extract_text_with_ocr(pdf_path):
         logger.error(f"Fehler bei : {e}")
         return ""
 
-# Dateiüberwachung
+# überwachung datei
 class ScanHandler(FileSystemEventHandler):
     def on_created(self, event):
         if event.src_path.endswith(".pdf"):
             logger.info(f"PDF erkannt: {event.src_path}")
-            # ocr neue datei
+            # ocr neu
             extracted_text = extract_text_with_ocr(event.src_path)
             # umbenennen
             logger.info(f"Extrahiert: {extracted_text[:100]}...")  
