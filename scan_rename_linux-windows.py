@@ -26,7 +26,7 @@ def extract_text_with_ocr(pdf_path):
         logger.info(f"fertig: {pdf_path}")
         return text
     except Exception as e:
-        logger.error(f"Fehler bei : {e}")
+        logger.error(f"Fehler bei: {e}")
         return ""
 
 # überwachung datei
@@ -37,7 +37,7 @@ class ScanHandler(FileSystemEventHandler):
             # ocr neu
             extracted_text = extract_text_with_ocr(event.src_path)
             # umbenennen
-            logger.info(f"Extrahiert: {extracted_text[:100]}...")  
+            logger.info(f"folgendes erkannt: {extracted_text[:100]}...")  
 
 # Überwachung
 def start_monitoring():
