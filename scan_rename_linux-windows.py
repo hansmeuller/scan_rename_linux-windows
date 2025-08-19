@@ -39,13 +39,13 @@ class ScanHandler(FileSystemEventHandler):
             # umbenennen
             logger.info(f"folgendes erkannt: {extracted_text[:100]}...")  
 
-# Überwachung
+# überwachung
 def start_monitoring():
     event_handler = ScanHandler()
     observer = Observer()
     observer.schedule(event_handler, path=scans_folder, recursive=False)
     observer.start()
-    logger.info(f"Überwache: {scans_folder}")
+    logger.info(f"überwache: {scans_folder}")
     try:
         while True:
             time.sleep(1)
