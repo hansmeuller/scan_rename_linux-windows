@@ -29,7 +29,7 @@ def extract_text_with_ocr(pdf_path):
         logger.error(f"Fehler bei : {e}")
         return ""
 
-# überwachung datei
+# überwachung
 class ScanHandler(FileSystemEventHandler):
     def on_created(self, event):
         if event.src_path.endswith(".pdf"):
