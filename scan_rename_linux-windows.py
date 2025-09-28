@@ -53,6 +53,6 @@ def start_monitoring():
         observer.stop()
     observer.join()
 
-#and final the main
+#the main
 if __name__ == "__main__":
     start_monitoring()
