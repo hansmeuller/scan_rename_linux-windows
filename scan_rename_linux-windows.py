@@ -39,7 +39,7 @@ class ScanHandler(FileSystemEventHandler):
             # umbenennen
             logger.info(f"folgendes erkannt: {extracted_text[:100]}...")  
 
-# überwachung
+#überwachung
 def start_monitoring():
     event_handler = ScanHandler()
     observer = Observer()
@@ -53,6 +53,6 @@ def start_monitoring():
         observer.stop()
     observer.join()
 
-#the main
+#main
 if __name__ == "__main__":
     start_monitoring()
