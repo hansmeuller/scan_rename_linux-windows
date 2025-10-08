@@ -10,10 +10,10 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 logger = logging.getLogger()
 
-# ordner angeben
+#ordner angeben
 scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
 
-# ocr
+#ocr
 def extract_text_with_ocr(pdf_path):
     try:
         logger.info(f"Starte: {pdf_path}")
