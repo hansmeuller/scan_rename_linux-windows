@@ -17,7 +17,7 @@ scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
 def extract_text_with_ocr(pdf_path):
     try:
         logger.info(f"Starte: {pdf_path}")
-        # Konvertiere 
+        #Konvertiere 
         pages = convert_from_path(pdf_path)
         text = ""
         for page in pages:
