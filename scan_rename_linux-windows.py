@@ -32,7 +32,7 @@ def extract_text_with_ocr(pdf_path):
 #erkennt
 class ScanHandler(FileSystemEventHandler):
     def on_created(self, event):
-        if event.src_path.endswith(".pdf"):
+        if event.src_path.endswith(".pdf "):
             logger.info(f"PDF erkannt: {event.src_path}")
             # ocr new
             extracted_text = extract_text_with_ocr(event.src_path)
