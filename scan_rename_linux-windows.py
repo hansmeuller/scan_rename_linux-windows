@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', date
 logger = logging.getLogger()
 
 #ordner angeben
-scans_folder = "ftp://fritz.box/PortableSSD/scans/_test"
+scans_folder = "ftp://fritz.box/PortableSSD/scans/_tests"
 
 #ocr
 def extract_text_with_ocr(pdf_path):
