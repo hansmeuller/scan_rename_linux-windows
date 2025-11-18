@@ -16,17 +16,17 @@ scans_folder = "ftp://fritz.box/PortableSSD/scans/_tests"
 #ocr
 def extract_text_with_ocr(pdf_path):
     try:
-        logger.info(f"Starte : {pdf_path}")
+        logger.info(f"Starte: {pdf_path}")
         #Konvertiere 
         pages = convert_from_path(pdf_path)
         text = ""
         for page in pages:
             # ocr auf jeder Seite anwenden
             text += pytesseract.image_to_string(page)
-        logger.info(f"fertig : {pdf_path}")
+        logger.info(f"fertig: {pdf_path}")
         return text
     except Exception as e:
-        logger.error(f"Fehler bei : {e}")
+        logger.error(f"Fehler bei: {e}")
         return ""
 
 #erkennt
